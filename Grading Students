@@ -1,0 +1,22 @@
+function gradingStudents(grades) {
+
+    // Write your code here
+    var d=0;
+    var max=0;
+    var min=0;
+
+    for(var i in grades){
+        if(grades[i]>=38){
+        d=grades[i]/5;
+        max=Math.ceil(d)*5;
+        
+        if((max-grades[i])<3){
+            grades[i]=max;
+            
+        }
+        }
+    }
+    return grades;
+
+}
+
