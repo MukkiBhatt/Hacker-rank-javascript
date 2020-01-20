@@ -1,22 +1,12 @@
 // Complete the birthdayCakeCandles function below.
 function birthdayCakeCandles(ar) {
-    var max=0;
-    for(var i  in ar){
-        if(ar[i]>max){
-            max=ar[i];
-        }
-        else 
-        max=ar[i];
-
-    }
-    var count=0;
-    for(var j  in ar){
-        if(ar[j]===max){
+    var max=Math.max(...ar);
+    var count =0;
+    for(let i = 0; i < ar.length; i++) {
+        if(ar[i] === max) {
             count +=1;
         }
-
     }
-    console.log(count);
-
-
+    return count;
+  
 }
